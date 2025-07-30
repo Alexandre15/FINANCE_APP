@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+<<<<<<< HEAD
   <meta charset="UTF-8" />
   <title>Dashboard - Dark Style</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+=======
+    <meta charset="UTF-8" />
+    <title>Gráfico de Rosca - Diversificação</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        body {
+            background-color: #9e9e9e;
+            color: #eee;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+>>>>>>> 45573d40ff44772042c0b38daea86e29cb66ef9b
 
   <link
     rel="stylesheet"
@@ -45,9 +62,46 @@
     </div>
   </div>
 
+<<<<<<< HEAD
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+=======
+    <script>
+        const options = {
+            chart: {
+                type: 'donut',
+                background: '#1f1f1f',
+                foreColor: '#eee',
+            },
+            labels: {{ data.labels | tojson }},
+            series: {{ data.series | tojson }},
+            legend: {
+                position: 'bottom',
+                labels: {
+                    colors: '#eee'
+                }
+            },
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 300
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            colors: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // paleta moderna e vibrante
+            dataLabels: {
+                enabled: true,
+                style: {
+                    colors: ['#eee']
+                }
+            }
+        };
+>>>>>>> 45573d40ff44772042c0b38daea86e29cb66ef9b
 
   <script>
     // Passando dados do Flask para JS
@@ -55,4 +109,8 @@
     const series = {{ data.series | tojson }};
   </script>
 </body>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45573d40ff44772042c0b38daea86e29cb66ef9b
 </html>

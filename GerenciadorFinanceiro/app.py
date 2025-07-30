@@ -1,4 +1,8 @@
 from flask import Flask, render_template
+<<<<<<< HEAD
+=======
+# from flask_sqlalchemy import SQLAlchemy
+>>>>>>> 45573d40ff44772042c0b38daea86e29cb66ef9b
 
 app = Flask(__name__)
 
