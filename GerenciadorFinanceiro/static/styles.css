@@ -1,0 +1,32 @@
+body {
+    background-color: #343e59;
+    color: #eeeeee;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #wrapper {
+    padding: 20px;
+  }
+  
+  .box {
+    background-color: #2B2D3E;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    color: #eeeeee;
+  }
+  
+  .btn-outline-warning {
+    border-color: #ffc107;
+    color: #ffc107;
+    font-weight: 600;
+  }
+  
+  .btn-outline-warning:hover {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+    color: #121212;
+  }
+  

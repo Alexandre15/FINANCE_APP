@@ -1,0 +1,51 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Color Theme Swatches in Hex */
+.Car-Rental-Dashboard-1-hex { color: #4F3E8C; }
+.Car-Rental-Dashboard-2-hex { color: #9177F2; }
+.Car-Rental-Dashboard-3-hex { color: #221E40; }
+.Car-Rental-Dashboard-4-hex { color: #161426; }
+.Car-Rental-Dashboard-5-hex { color: #46A66F; }
+
+/* Color Theme Swatches in RGBA */
+.Car-Rental-Dashboard-1-rgba { color: rgba(78, 61, 140, 1); }
+.Car-Rental-Dashboard-2-rgba { color: rgba(145, 118, 242, 1); }
+.Car-Rental-Dashboard-3-rgba { color: rgba(34, 29, 63, 1); }
+.Car-Rental-Dashboard-4-rgba { color: rgba(22, 19, 38, 1); }
+.Car-Rental-Dashboard-5-rgba { color: rgba(69, 165, 111, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Car-Rental-Dashboard-1-hsla { color: hsla(253, 38, 39, 1); }
+.Car-Rental-Dashboard-2-hsla { color: hsla(253, 82, 70, 1); }
+.Car-Rental-Dashboard-3-hsla { color: hsla(247, 36, 18, 1); }
+.Car-Rental-Dashboard-4-hsla { color: hsla(247, 31, 11, 1); }
+.Car-Rental-Dashboard-5-hsla { color: hsla(146, 40, 46, 1); }

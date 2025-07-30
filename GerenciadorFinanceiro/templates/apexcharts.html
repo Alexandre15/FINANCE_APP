@@ -1,70 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8" />
-    <title>Gráfico de Rosca - Diversificação</title>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <style>
-        body {
-            background-color: #121212;
-            color: #eee;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="UTF-8" />
+  <title>Dashboard - Dark Style</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        #chart {
-            max-width: 480px;
-            width: 100%;
-        }
-    </style>
+  <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 </head>
-
 <body>
-    <div id="chart"></div>
+  <div id="wrapper">
+    <div class="content-area">
+      <div class="container-fluid">
+        <div class="text-right mt-3 mb-3 d-fixed">
+          <a
+            href="https://github.com/apexcharts/apexcharts.js/tree/master/samples/vanilla-js/dashboards/dark"
+            target="_blank"
+            class="btn btn-outline-warning mr-2"
+          >
+            <span class="btn-text">View Code</span>
+          </a>
+        </div>
+        <div class="main">
+          <div class="row mt-4 justify-content-center">
+            <div class="col-md-6">
+              <div class="box shadow mt-4">
+                <div id="donutChart"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        const options = {
-            chart: {
-                type: 'donut',
-                background: '#1f1f1f',
-                foreColor: '#eee',
-            },
-            labels: {{ data.labels | tojson }},
-        series: { { data.series | tojson } },
-        legend: {
-            position: 'bottom',
-                labels: {
-                colors: '#eee'
-            }
-        },
-        responsive: [{
-            breakpoint: 480,
-            options: {
-                chart: {
-                    width: 300
-                },
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }],
-            colors: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF'], // paleta moderna e vibrante
-                dataLabels: {
-            enabled: true,
-                style: {
-                colors: ['#eee']
-            }
-        }
-    };
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="{{ url_for('static', filename='scripts.js') }}"></script>
 
-        const chart = new ApexCharts(document.querySelector("#chart"), options);
-        chart.render();
-    </script>
+  <script>
+    // Passando dados do Flask para JS
+    const labels = {{ data.labels | tojson }};
+    const series = {{ data.series | tojson }};
+  </script>
 </body>
-
 </html>
