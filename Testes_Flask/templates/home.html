@@ -1,0 +1,22 @@
+<h2>Olá, {{ user.username }}!</h2>
+<a href="/logout">Sair</a>
+
+<h3>Adicionar item</h3>
+<form method="post" action="/add">
+  <select name="tipo">
+    <option value="book">Livro</option>
+    <option value="food">Comida</option>
+    <option value="movie">Filme</option>
+  </select>
+  <input name="valor" required>
+  <button type="submit">Adicionar</button>
+</form>
+
+<h3>Livros</h3>
+<ul>{% for b in user.books %}<li>{{ b.title }}</li>{% endfor %}</ul>
+
+<h3>Comidas</h3>
+<ul>{% for f in user.foods %}<li>{{ f.name }}</li>{% endfor %}</ul>
+
+<h3>Filmes</h3>
+<ul>{% for m in user.movies %}<li>{{ m.title }}</li>{% endfor %}</ul>
