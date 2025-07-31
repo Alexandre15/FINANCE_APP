@@ -1,19 +1,16 @@
 from sqlalchemy import create_engine, String, Integer, Column, ForeignKey
-from sqlalchemy.orm import declarative_base, sessionmaker, relationship, mapped_column, Mapped
+from sqlalchemy.orm import DeclarativeBase, sessionmaker, relationship, mapped_column, Mapped
 
 # Configurações
 db = create_engine('sqlite:///teste-relashionship.db')
-Base = declarative_base()
+# Base = declarative_base()
 Session = sessionmaker(bind=db)
 session = Session()
 
 
 # Entidades
-class BaseModel(Base):
-    __abstract__ = True
-    __allow_unmapped__ = True
-
-    id = Column(Integer, primary_key=True)
+class Base(DeclarativeBase):
+    pass
 
 
 class Filmes(Base):
