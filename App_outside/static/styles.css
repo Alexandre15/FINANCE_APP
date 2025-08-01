@@ -71,13 +71,16 @@ a {
 }
 
 .about i {
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 #about-btn {
     height: 50px;
     width: 100%;
-    text-align: center;
+    text-align: start;
+    margin-left: 20px;
     border: none;
+    font-size: 1.1em;
     background-color: lightgray;
+    cursor: pointer;
 }
