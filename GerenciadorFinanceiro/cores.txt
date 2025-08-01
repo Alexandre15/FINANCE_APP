@@ -36,12 +36,12 @@
 .Car-Rental-Dashboard-4-hex { color: #161426; }
 .Car-Rental-Dashboard-5-hex { color: #46A66F; }
 
-/* Color Theme Swatches in RGBA */
-.Car-Rental-Dashboard-1-rgba { color: rgba(78, 61, 140, 1); }
-.Car-Rental-Dashboard-2-rgba { color: rgba(145, 118, 242, 1); }
-.Car-Rental-Dashboard-3-rgba { color: rgba(34, 29, 63, 1); }
-.Car-Rental-Dashboard-4-rgba { color: rgba(22, 19, 38, 1); }
-.Car-Rental-Dashboard-5-rgba { color: rgba(69, 165, 111, 1); }
+/* Color Theme Swatches in RGBA */ Roxos
+.Car-Rental-Dashboard-1-rgba { color: rgba(78, 61, 140, 1); } retangulos
+.Car-Rental-Dashboard-2-rgba { color: rgba(145, 118, 242, 1); } claro
+.Car-Rental-Dashboard-3-rgba { color: rgba(34, 29, 63, 1); } fundo
+.Car-Rental-Dashboard-4-rgba { color: rgba(22, 19, 38, 1); } fundo escuro
+.Car-Rental-Dashboard-5-rgba { color: rgba(69, 165, 111, 1); } verde
 
 /* Color Theme Swatches in HSLA */
 .Car-Rental-Dashboard-1-hsla { color: hsla(253, 38, 39, 1); }

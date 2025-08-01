@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+:root {
+    /* Cores principais */
+    --color-primary: #4f46e5;        /* Azul escuro */
+    --color-background: #e3e9f7;     /* Azul claro / fundo */
+    --color-white: #ffffff;          /* Branco */
+    --color-gray: #6b6b6b;           /* Cinza médio */
+    --color-black: #0a0a0a;          /* Quase preto */
+}
+
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
@@ -9,6 +19,7 @@
 
 main {
     box-sizing: border-box;
+    background-color: var(--color-background);
 }
 
 .container {
