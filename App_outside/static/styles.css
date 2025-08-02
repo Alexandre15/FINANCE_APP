@@ -17,8 +17,7 @@
     box-sizing: border-box;
 }
 
-main {
-    box-sizing: border-box;
+body {
     background-color: var(--color-background);
 }
 
@@ -27,8 +26,20 @@ main {
     height: 100vh;
     width: 200px;
     flex-flow: column wrap;
-    background-color: lightgray;
+    background-color: var(--color-white);
     border-radius: 0 15px 15px 0;
+}
+
+.sidebar-content {
+    padding: 10px;
+}
+
+.avatar {
+    width: 100px;
+}
+
+.user-info {
+    font-size: .6em;
 }
 
 .titulo-sidebar {
@@ -39,30 +50,21 @@ main {
 .sidebar-items {
     display: flex;
     justify-content: center;
-}
-
-.menu {
-    display: flex;
+    gap: 8px;
     flex-flow: column nowrap;
-    flex: 1 0 auto;
     list-style-type: none;
 }
 
-.menu li i {
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-.menu li {
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+.sidebar-items li {
     display: flex;
+    border-radius: 5px;
+    border: 1px solid black;
     transition: background-color .2s ease;
+    align-items: center;
 }
 
-.menu li:hover {
-    background-color: rgba(128, 128, 128, 0.397);
+.sidebar-items li:hover {
+    background-color: var(--color-background);
 }
 
 a {
@@ -70,6 +72,7 @@ a {
     color: black;
     font-weight: bold;
     font-size: 1.1em;
+    justify-content: flex-end;
 }
 
 .about {
@@ -85,7 +88,7 @@ a {
     margin-left: 40px;
 }
 
-#about-btn {
+about-btn {
     height: 50px;
     width: 100%;
     text-align: start;
