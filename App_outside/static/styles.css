@@ -47,6 +47,12 @@ body {
     padding: 20px;
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.titulo-sidebar > img {
+    width: 60px;
 }
 
 .sidebar-items {
@@ -57,7 +63,14 @@ body {
     list-style-type: none;
 }
 
+
 .sidebar:hover .sidebar-items > li > a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar:hover .titulo-sidebar {
+    width: 100%;
     opacity: 1;
     visibility: visible;
 }
