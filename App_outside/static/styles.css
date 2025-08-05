@@ -92,7 +92,7 @@ a {
     justify-content: flex-end;
     opacity: 0;
     visibility: hidden;
-    transition: visibility 1s ease;
+    transition: all .2s ease-out;
 }
 
 .about {
