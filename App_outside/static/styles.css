@@ -19,6 +19,7 @@
 
 body {
     background-color: var(--color-background);
+    display: flex;
 }
 
 .sidebar {
@@ -136,4 +137,22 @@ a {
 
 #about-btn:hover {
     background-color: var(--color-background);
+}
+
+.itens {
+    background-color: #686868;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 90vh;
+}
+
+.main-section {
+    flex-grow: 1;
+    background-color: rgb(61, 61, 61);
+}
+
+.tabela > .thead-titulo {
+    background-color: #4f46e5;
+    color: white;
 }
