@@ -22,6 +22,16 @@ body {
     display: flex;
 }
 
+table, th, td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+input {
+    margin: 5px;
+}
+
 .sidebar {
     display: flex;
     height: 100vh;
@@ -140,7 +150,7 @@ a {
 }
 
 .itens {
-    background-color: #686868;
+    background-color: var(--color-background);
     margin-top: 30px;
     margin-bottom: 30px;
     width: 100%;
@@ -152,7 +162,24 @@ a {
     background-color: rgb(61, 61, 61);
 }
 
-.tabela > .thead-titulo {
+.tabela {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 10px 5px;
+}
+
+.thead-titulo {
     background-color: #4f46e5;
     color: white;
+}
+
+.thead-titulo th {
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+tbody {
+    color: black;
+    text-align: center;
 }

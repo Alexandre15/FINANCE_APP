@@ -40,17 +40,59 @@
     </nav>
     <main class="main-section">
         <div class="itens">
+            <label for="item">Filtrar por ITEM:</label>
+            <input type="text" id="FiltroItem" onkeyup="filtrarTabela()">
+            
             <table class="tabela">
                 <thead class="thead-titulo">
-                    <th>FORJADO</th>
-                    <th>ITEM</th>
-                    <th>DATA DE ENVIO</th>
-                    <th>QTY ENVIADA</th>
-                    <th>DATA DE RETORNO</th>
-                    <th>QTY RETORNADA</th>
-                    <th>NECESSIDADE</th>
+                    <tr class="tr-titulo">
+                        <th>FORJADO</th>
+                        <th>ITEM</th>
+                        <th>DATA DE ENVIO</th>
+                        <th>QTY ENVIADA</th>
+                        <th>DATA DE RETORNO</th>
+                        <th>QTY RETORNADA</th>
+                        <th>NECESSIDADE</th>
+                    </tr>
                 </thead>
+                <tbody id="corpo-tabela">
+                    
+                </tbody>
             </table>
+            <script>
+                let allDados = []
+
+                function renderizarTabela(dados) {
+                    const tbody = document.getElementById('corpo-tabela')
+                    tbody.innerHTML = '';
+                    dados.forEach(row => {
+                        const tr = document.createElement('tr')
+                        tr.innerHTML = `
+                        <td>${row.FORJADO}</td>
+                        <td>${row.ITEM}</td>
+                        <td>${row.DATA_ENV}</td>
+                        <td>${row.QTY_ENV}</td>
+                        <td>${row.DATA_RET}</td>
+                        <td>${row.QTY_RET}</td>
+                        <td>${row.NECESSIDADE}</td>
+                        `;
+                        tbody.appendChild(tr)
+                    });
+                }
+
+                fetch('/dados')
+                    .then(resp => resp.json())
+                    .then(data => {
+                        allDados = data;
+                        renderizarTabela(data);
+                    });
+
+                document.getElementById('FitroItem').addEventListener('input', function() {
+                    const termo = this.value.toLowerCase();
+                    const filtrados = allDados.filter(dado => dado.ITEM.toLowerCase().includes(termo));
+                    renderizarTabela(filtrados);
+                });
+            </script>
         </div>
     </main>
 </body>
