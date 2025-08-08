@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, jsonify
 import pandas as pd
 # from sqlalchemy import create_engine, Column, Integer, String
 
